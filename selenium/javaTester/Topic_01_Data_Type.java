@@ -1,6 +1,9 @@
 package javaTester;
 
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -45,12 +48,13 @@ public class Topic_01_Data_Type {
 		
 		// long
 		
-		// Số thực
+		// Số thực float, double
 		
 		// float
+		float fSalary = 7.5f;
 		
 		// double
-		
+		double dPoint = 8.4d; 
 		// char - kí tự
 		
 		
@@ -93,6 +97,9 @@ public class Topic_01_Data_Type {
 		System.out.println(a);
 		System.out.println(b);
 		
+		
+		List<Integer> istudentNumber = new ArrayList<Integer>();
+		Set<Integer> setStudentNumber = new LinkedHashSet<>();
 	}
 	
 
