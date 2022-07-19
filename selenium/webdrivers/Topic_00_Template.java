@@ -34,12 +34,23 @@ public class Topic_00_Template {
 	}
 
 	@Test
-	public void TC_03_() {
-		
+	public void TC_03_()  {
+		SleepInSecond(5);
 	}
 
 	@AfterClass
 	public void afterClass() {
 		driver.quit();
+	}
+	
+	
+	// Hàm Sleep cứng (static wait)
+	public void SleepInSecond(long timeInSecond) {
+		try {
+			Thread.sleep(timeInSecond * 1000); // s
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
