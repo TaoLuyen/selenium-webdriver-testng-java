@@ -27,7 +27,7 @@ public class Topic_09_Checkbox_Radio {
 		
 	}
 
-	@Test
+	//@Test
 	public void TC_01_Jotform() {
 		
 		driver.get("https://automationfc.github.io/multiple-fields/");
@@ -58,7 +58,7 @@ public class Topic_09_Checkbox_Radio {
 		
 	}
 
-	@Test
+	//@Test
 	public void TC_02_Jotform_Check_All() {
 		driver.get("https://automationfc.github.io/multiple-fields/");
 		
@@ -91,7 +91,7 @@ public class Topic_09_Checkbox_Radio {
 		}
  	}
 
-	@Test
+	//@Test
 	public void TC_03_Select_All()  {
 		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
 		SleepInSecond(5);
@@ -111,6 +111,19 @@ public class Topic_09_Checkbox_Radio {
 		}
 	}
 
+	@Test
+	public void TC_04_Default()  {
+		driver.get("https://demos.telerik.com/kendo-ui/checkbox/index");
+		SleepInSecond(5);
+		checkToCheckboxOrRadio("//label[text()='Luggage compartment cover']/preceding-sibling::input");
+		Assert.assertTrue(isElementSelected("//label[text()='Luggage compartment cover']/preceding-sibling::input"));
+		
+		
+		//uncheck
+		uncheckToCheckboxOrRadio("//label[text()='Luggage compartment cover']/preceding-sibling::input");
+		Assert.assertFalse(isElementSelected("//label[text()='Luggage compartment cover']/preceding-sibling::input"));
+			
+	}
 	
 	@AfterClass
 	public void afterClass() {
